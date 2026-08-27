@@ -1,7 +1,8 @@
-# THK onderwijsmaterialen
+# THK Methodologie & Statistiek
 
-Publieke back-upomgeving voor studentmaterialen van Tandheelkunde. Brightspace
-blijft de officiële cursusomgeving.
+Publieke verzameling van colleges, practica, datasets en vrijgegeven antwoorden
+voor methodologie en statistiek binnen Tandheelkunde. Brightspace blijft de
+officiële omgeving voor mededelingen, deadlines en cursuswijzigingen.
 
 ## Huidige inhoud
 
