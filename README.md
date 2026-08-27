@@ -16,8 +16,12 @@ vrijgegeven. Ze staan op de cursuspagina bewust in een afzonderlijke sectie.
 
 ## Publiceren met GitHub Pages
 
-Publiceer de site vanuit de root van de `main`-branch via **Settings > Pages**.
-De site gebruikt alleen statische HTML en CSS en heeft geen buildstap nodig.
+De workflow `.github/workflows/deploy-pages.yml` bouwt en publiceert de website
+automatisch bij iedere push naar `main`. De workflow kan daarnaast handmatig
+worden gestart vanuit het tabblad **Actions**.
+
+Selecteer eenmalig **Settings > Pages > Source > GitHub Actions**. Daarna is geen
+handmatige publicatiestap meer nodig.
 
 ## Veilig publiceren
 
