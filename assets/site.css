@@ -495,7 +495,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.lock-icon {
+.answer-icon {
   display: grid;
   place-items: center;
   width: 48px;
@@ -505,7 +505,7 @@ h3 {
   border-radius: 13px;
 }
 
-.lock-icon svg {
+.answer-icon svg {
   width: 23px;
   height: 23px;
 }
@@ -515,15 +515,11 @@ h3 {
   color: #654f25;
 }
 
-.unavailable-badge {
-  display: inline-flex;
-  padding: 6px 10px;
+.answer-file-meta {
+  margin-left: 12px;
   color: var(--amber-ink);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid #e2cb8d;
-  border-radius: 7px;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .sidebar {
@@ -665,6 +661,16 @@ h3 {
 
   .answers-section {
     padding: 25px 20px;
+  }
+
+  .answers-section .download-button {
+    width: 100%;
+  }
+
+  .answer-file-meta {
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
   }
 
   .footer-inner {
