@@ -358,18 +358,46 @@ h3 {
 }
 
 .session {
-  padding: 34px;
+  overflow: hidden;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 8px 28px rgba(21, 49, 58, 0.055);
 }
 
+.session + .session {
+  margin-top: 18px;
+}
+
 .session-heading {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
+  grid-template-columns: 52px minmax(0, 1fr) 28px;
   gap: 18px;
-  padding-bottom: 28px;
+  align-items: center;
+  padding: 30px 34px;
+  cursor: pointer;
+  list-style: none;
+  transition: background 160ms ease;
+}
+
+.session-heading::-webkit-details-marker {
+  display: none;
+}
+
+.session-heading::marker {
+  content: "";
+}
+
+.session-heading:hover {
+  background: #f8fbfb;
+}
+
+.session-heading:focus-visible {
+  outline: 3px solid #f0b429;
+  outline-offset: -4px;
+}
+
+.session[open] .session-heading {
   border-bottom: 1px solid var(--line);
 }
 
@@ -386,13 +414,49 @@ h3 {
   font-weight: 850;
 }
 
-.session-heading h2 {
-  margin-bottom: 8px;
+.session-heading-copy,
+.session-heading .eyebrow,
+.session-title,
+.session-description {
+  display: block;
 }
 
-.session-heading p:last-child {
-  margin-bottom: 0;
+.session-heading-copy {
+  min-width: 0;
+}
+
+.session-title {
+  margin-bottom: 8px;
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.session-description {
   color: var(--muted);
+}
+
+.session-toggle {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--teal-dark);
+  transition: transform 160ms ease;
+}
+
+.session-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.session[open] .session-toggle {
+  transform: rotate(180deg);
+}
+
+.session-content {
+  padding: 0 34px 28px;
 }
 
 .resource-list {
@@ -474,52 +538,6 @@ h3 {
 .download-button svg {
   width: 18px;
   height: 18px;
-}
-
-.answers-section {
-  margin-top: 30px;
-  padding: 30px 34px;
-  background: var(--amber-soft);
-  border: 1px solid #ebd8a6;
-  border-radius: var(--radius);
-}
-
-.answers-heading-row {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.answers-heading-row h2 {
-  margin-bottom: 0;
-}
-
-.answer-icon {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  color: var(--amber-ink);
-  background: white;
-  border-radius: 13px;
-}
-
-.answer-icon svg {
-  width: 23px;
-  height: 23px;
-}
-
-.answers-section > p {
-  margin-bottom: 14px;
-  color: #654f25;
-}
-
-.answer-file-meta {
-  margin-left: 12px;
-  color: var(--amber-ink);
-  font-size: 0.8rem;
-  font-weight: 700;
 }
 
 .sidebar {
@@ -633,16 +651,26 @@ h3 {
   }
 
   .session {
-    padding: 24px 20px;
+    border-radius: 14px;
   }
 
   .session-heading {
-    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-columns: 44px minmax(0, 1fr) 24px;
+    gap: 14px;
+    padding: 22px 20px;
   }
 
   .session-number {
     width: 44px;
     height: 44px;
+  }
+
+  .session-title {
+    font-size: 1.35rem;
+  }
+
+  .session-content {
+    padding: 0 20px 22px;
   }
 
   .resource-card {
@@ -657,20 +685,6 @@ h3 {
   .download-button {
     grid-column: 1 / -1;
     width: 100%;
-  }
-
-  .answers-section {
-    padding: 25px 20px;
-  }
-
-  .answers-section .download-button {
-    width: 100%;
-  }
-
-  .answer-file-meta {
-    display: block;
-    margin: 10px 0 0;
-    text-align: center;
   }
 
   .footer-inner {
