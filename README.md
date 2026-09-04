@@ -6,13 +6,15 @@ officiële omgeving voor mededelingen, deadlines en cursuswijzigingen.
 
 ## Huidige inhoud
 
-- WS2-1, college en practicum 1 (2026-2027)
+- WS2-1, colleges en practica 1 en 2 (2026-2027)
 - collegeslides als PDF
-- practicum als Word-bestand
-- SPSS-databestand `pockets.sav`
+- practica als Word-bestand
+- SPSS-databestanden `pockets.sav` en `endodontic_study.sav`
 
 Antwoorden worden pas toegevoegd wanneer ze voor studenten mogen worden
-vrijgegeven. Ze staan op de cursuspagina bewust in een afzonderlijke sectie.
+vrijgegeven. De antwoorden bij practicum 1 staan op de cursuspagina bewust in
+een afzonderlijke sectie; de antwoorden bij practicum 2 zijn nog niet
+beschikbaar.
 
 ## Publiceren met GitHub Pages
 
